@@ -13,3 +13,4 @@ Route::middleware('auth:api')->group(function() {
 Route::post('services/validate_cpe', 'Api\ServiceController@validateCpe');
 Route::post('services/consult_status', 'Api\ServiceController@consultStatus');
 Route::post('services/consult_cdr_status', 'Api\ServiceController@consultCdrStatus');
+Route::post('services/search_document', 'Api\DocumentController@getLinks');
