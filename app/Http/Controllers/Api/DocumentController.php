@@ -82,13 +82,28 @@ class DocumentController extends Controller
 
     public function getLinks(Request $request) {
 
-        $company = Company::where('number', $request->input('number_ruc_company'))->first();
+        $company = Company::where('number', $request->input('company_number'))->first();
+
+        if(!$company) {
+            return [
+                'success' => false,
+                'message' => 'El RUC del emisor no se encuentra registrado.'
+            ];
+        }
 
         $document = Document::where('user_id', $company->user_id)
+            ->where('document_type_id', $request->input('document_type_id'))
             ->where('series', $request->input('series'))
             ->where('number', $request->input('number_document'))
             ->where('total', $request->input('total'))
             ->first();
+
+        if(!$document) {
+            return [
+                'success' => false,
+                'message' => 'Comprobante no encontrado.'
+            ];
+        }
 
         return [
             'success' => true,
