@@ -34,4 +34,4 @@ Gracias por considerar contribuir a la Api Rest
 
 ## Vulnerabilidades de seguridad
 
-Si descubre una vulnerabilidad de seguridad en la API, envíe un correo electrónico a facturaloperuonline@gmail.com . Las vulnerabilidades de seguridad serán tratadas con prontitud.
+Si descubre una vulnerabilidad de seguridad en la API, envíe un correo electrónico a soporte@facturaloperu.com . Las vulnerabilidades de seguridad serán tratadas con prontitud.
